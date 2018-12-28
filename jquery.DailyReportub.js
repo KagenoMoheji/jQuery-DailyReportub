@@ -74,10 +74,10 @@ function setDailyReportub(args, year, month){
 
         dateList[i] = String(i-startDayIndex+1);
     }
+    let hasIvents = ("ivents" in args) ? true:false;
     for(let i=0; i<weekRowCnt; i++){
         elem = '<div id="drhubRow_' + i + '" class="drhubRow"></div>';
         $("#drhubBody").append(elem);
-
         for(let j=0; j<7; j++){
             if(i === 0){
                 elem = '<span class="drhubCell">' + daysList[j] + '</span>';
@@ -88,7 +88,7 @@ function setDailyReportub(args, year, month){
                 elem = '<span id="drhubCell_' + (dateIndex) + '" class="drhubCell">' + dateList[dateIndex] + '</span>';
                 $("#drhubRow_" + i).append(elem);
                 let iventsKey = year + "/" + (month+1) + "/" + dateList[dateIndex];
-                if(iventsKey in args["ivents"]){
+                if(hasIvents && (iventsKey in args["ivents"])){
                     $("#drhubCell_" + dateIndex).addClass("hasTooltip");
                     $("#drhubCell_" + dateIndex).append('<span class="tooltip"><p class="tooltipText"></p></span>');
                     let iventsCnt = args["ivents"][iventsKey].length;
