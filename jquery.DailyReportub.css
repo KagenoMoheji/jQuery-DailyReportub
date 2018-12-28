@@ -1,0 +1,72 @@
+#DailyReportub{
+    background-color: transparent;
+    font-family: "メイリオ";
+}
+
+#drhubHeader{
+    padding: 5px 0 5px 0;
+    width: 100%;
+    text-align: center;
+}
+#drhubHeader_mid{
+    padding: 0 5%;
+    vertical-align: middle;
+    margin: 0 auto;
+}
+
+#drhubBody{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.drhubRow{
+    width: 100%;
+}
+
+.drhubCell{
+    display: inline-block;
+    margin: 0 2px;
+    height: 85%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.hasTooltip{
+    position: relative;
+}
+.tooltip{
+    visibility: hidden;
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 500ms;
+    width: 200px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin-left: -95px;
+}
+.tooltip>.tooltipText{
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: inline-block;
+    text-align: left;
+}
+.tooltip>.tooltipText::before{
+    content:"";
+    position: absolute;
+    top: -15%;
+    left: 40%;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent #333 transparent;
+}
+.hasTooltip:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
