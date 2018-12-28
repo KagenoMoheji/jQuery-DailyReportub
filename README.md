@@ -70,7 +70,7 @@ $(function(){
     - Initail value：None
 
 ### DEMO GIF
-![DEMO](https://raw.github.com/wiki/takuyama29/WorldTracking/images/)
+![DEMO](https://github.com/KagenoMoheji/jQuery-DailyReportub/blob/media/DailyReportub.gif)
 
 ### And More...
 - If you want to re-decorate buttons...
