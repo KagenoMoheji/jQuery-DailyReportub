@@ -21,9 +21,10 @@ If you set this jQuery-library easily in your site, you can show daily report in
     <link rel="stylesheet" href="jquery.DailyReportub.min.css">
 </head>
 ```
-4. Set a tag with the ID `DailyReportub`.  
+4. Set a tag with the ID `#DailyReportub`.  
 You may be able to use any tag.
-5. In .js, you can set DailyReportub by setting some arguments like below.
+5. In .js, you can set DailyReportub by setting some arguments like below.  
+The options are described in the next chapter.
 ```
 $(function(){
     dailyReportub({
@@ -52,21 +53,21 @@ $(function(){
 ```
 
 ### Options
-- ***width***：
+- ***width***：The width of calendar.
     - Initial value：200
     - Minimum value：200
-- ***height***：
+- ***height***：The height of calendar.
     - Initial value：200
     - Minimum value：200
-- ***fontColor***：
+- ***fontColor***：The font color of calendar.
     - Initial value："#000"
-- ***borderColor***：
+- ***borderColor***：The border color of cells in calendar.
     - Initial value："#ccc"
-- ***backgroundColor***：
+- ***backgroundColor***：The background-color of calendar.
     - Initial value："transparent"
-- ***grassColor***：
+- ***grassColor***：The background-color (witch changes own depth by the counts of daily-reports) of cells in calendar.
     - Initial value："#0f0"
-- ***ivents***：
+- ***ivents***：Your daily reports. Write according to format "associative-array" like the example in the previous chapter.
     - Initail value：None
 
 ### DEMO GIF
@@ -74,4 +75,4 @@ $(function(){
 
 ### And More...
 - If you want to re-decorate buttons...
-    - You can re-decorate buttons with tag-IDs `drhubPrevMonth` and `drhubNextMonth`.
+    - You can re-decorate buttons with tag-IDs `#drhubPrevMonth` and `#drhubNextMonth`.
