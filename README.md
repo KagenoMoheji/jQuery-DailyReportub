@@ -21,9 +21,13 @@ If you set this jQuery-library easily in your site, you can show daily report in
     <link rel="stylesheet" href="jquery.DailyReportub.min.css">
 </head>
 ```
-4. Set a tag with the ID `#DailyReportub`.  
+4. Set a tag with the ID `DailyReportub`.  
 You may be able to use any tag.
-5. In .js, you can set DailyReportub by setting some arguments like below.  
+5. In .js, first, you must write code below.
+```
+$.getScript("jquery.DailyReportub.min.js")
+```
+6. In .js, you can set DailyReportub by setting some arguments like below.  
 The options are described in the next chapter.
 ```
 $(function(){
