@@ -84,9 +84,12 @@ $(function(){
     - You can change it and fix the position of a triangular portion of a tooltip by attributes below in `jquery.DailyReportub.min.css`.
 ```
 .tooltip{
-    width:200px; /* Width of tooltips. */
+    width: 200px; /* Width of tooltips. */
+    top: 80%;
+    left: 50%;
 }
 .tooltip>.tooltipText:before{
-    left:40%; /* Position of a triangular portion of a tooltip. */
+    top: -15px;
+    left: 40%; /* Position of a triangular portion of a tooltip. */
 }
 ```
