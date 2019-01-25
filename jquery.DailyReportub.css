@@ -60,7 +60,7 @@
 .tooltip>.tooltipText::before{
     content:"";
     position: absolute;
-    top: -15%;
+    top: -15px;
     left: 40%;
     border-width: 15px;
     border-style: solid;

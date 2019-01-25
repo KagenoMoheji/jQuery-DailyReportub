@@ -80,3 +80,13 @@ $(function(){
 ### And More...
 - If you want to re-decorate buttons...
     - You can re-decorate buttons with tag-IDs `#drhubPrevMonth` and `#drhubNextMonth`.
+- If you want to change the width of tooltips...
+    - You can change it and fix the position of a triangular portion of a tooltip by attributes below in `jquery.DailyReportub.min.css`.
+```
+.tooltip{
+    width:200px; /* Width of tooltips. */
+}
+.tooltip>.tooltipText:before{
+    left:40%; /* Position of a triangular portion of a tooltip. */
+}
+```
