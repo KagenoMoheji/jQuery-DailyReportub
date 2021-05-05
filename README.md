@@ -83,12 +83,12 @@ $(function(){
 - If you want to change the width of tooltips...
     - You can change it and fix the position of a triangular portion of a tooltip by attributes below in `jquery.DailyReportub.min.css`.
 ```
-.tooltip{
+.drhubTooltip{
     width: 200px; /* Width of tooltips. */
     top: 80%;
     left: 50%;
 }
-.tooltip>.tooltipText:before{
+.drhubTooltip>.drhubTooltipText:before{
     top: -15px;
     left: 40%; /* Position of a triangular portion of a tooltip. */
 }
