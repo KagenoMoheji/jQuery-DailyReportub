@@ -1,6 +1,7 @@
 #DailyReportub{
     background-color: transparent;
     font-family: "メイリオ";
+    margin: 0 auto;
 }
 
 #drhubHeader{
@@ -33,10 +34,10 @@
     background-color: transparent;
 }
 
-.hasTooltip{
+.drhubHasTooltip{
     position: relative;
 }
-.tooltip{
+.drhubTooltip{
     visibility: hidden;
     text-align: center;
     z-index: 1;
@@ -48,7 +49,7 @@
     left: 50%;
     margin-left: -95px;
 }
-.tooltip>.tooltipText{
+.drhubTooltip>.drhubTooltipText{
     background-color: #333;
     color: #fff;
     padding: 5px 10px;
@@ -57,7 +58,7 @@
     display: inline-block;
     text-align: left;
 }
-.tooltip>.tooltipText::before{
+.drhubTooltip>.drhubTooltipText::before{
     content:"";
     position: absolute;
     top: -15px;
@@ -66,7 +67,7 @@
     border-style: solid;
     border-color: transparent transparent #333 transparent;
 }
-.hasTooltip:hover .tooltip{
+.drhubHasTooltip:hover .drhubTooltip{
     visibility: visible;
     opacity: 1;
 }
