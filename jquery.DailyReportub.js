@@ -74,7 +74,7 @@ function setDailyReportub(args, year, month){
 
         dateList[i] = String(i-startDayIndex+1);
     }
-    let hasIvents = ("ivents" in args) ? true:false;
+    let hasEvents = ("events" in args) ? true:false;
     for(let i=0; i<weekRowCnt; i++){
         elem = '<div id="drhubRow_' + i + '" class="drhubRow"></div>';
         $("#drhubBody").append(elem);
@@ -87,18 +87,18 @@ function setDailyReportub(args, year, month){
                 let dateIndex = (i-1)*7+j;
                 elem = '<span id="drhubCell_' + (dateIndex) + '" class="drhubCell">' + dateList[dateIndex] + '</span>';
                 $("#drhubRow_" + i).append(elem);
-                let iventsKey = year + "/" + (month+1) + "/" + dateList[dateIndex];
-                if(hasIvents && (iventsKey in args["ivents"])){
-                    $("#drhubCell_" + dateIndex).addClass("hasTooltip");
-                    $("#drhubCell_" + dateIndex).append('<span class="tooltip"><p class="tooltipText"></p></span>');
-                    let iventsCnt = args["ivents"][iventsKey].length;
+                let eventsKey = year + "/" + (month+1) + "/" + dateList[dateIndex];
+                if(hasEvents && (eventsKey in args["events"])){
+                    $("#drhubCell_" + dateIndex).addClass("drhubHasTooltip");
+                    $("#drhubCell_" + dateIndex).append('<span class="drhubTooltip"><p class="drhubTooltipText"></p></span>');
+                    let eventsCnt = args["events"][eventsKey].length;
                     elem = "";
-                    for(let k=0; k<iventsCnt; k++){
-                        elem += args["ivents"][iventsKey][k] + "<br>";
+                    for(let k=0; k<eventsCnt; k++){
+                        elem += args["events"][eventsKey][k] + "<br>";
                     }
-                    $("#drhubCell_" + dateIndex + ">.tooltip>.tooltipText").append(elem);
+                    $("#drhubCell_" + dateIndex + ">.drhubTooltip>.drhubTooltipText").append(elem);
                     let rgb = hex2rgb(args["grassColor"]);
-                    let blurRate = (iventsCnt>=4) ? 0:iventsCnt;
+                    let blurRate = (eventsCnt>=4) ? 0:eventsCnt;
                     blurRate = blurRate * 0.25;
                     $("#drhubCell_" + dateIndex).css({
                         "background-color": "rgba(" + rgb["r"] + "," + rgb["g"] + "," + rgb["b"] + "," + blurRate + ")"
@@ -106,7 +106,7 @@ function setDailyReportub(args, year, month){
                 }
                 date = new Date();
                 let today = date.getFullYear() + "/" + (date.getMonth()+1) + "/" + date.getDate();
-                if(iventsKey===today){
+                if(eventsKey===today){
                     $("#drhubCell_" + dateIndex).addClass("drhubToday");
                 }
             }
@@ -116,7 +116,7 @@ function setDailyReportub(args, year, month){
     $(".drhubRow").css({
         "height" : rowHeight + "px"
     });
-    let cellWidth = Math.floor(args["width"]/7)-6;
+    let cellWidth = Math.floor(args["width"]/7)-8;
     $(".drhubCell").css({
         "width" : cellWidth + "px",
         "border" : "1px solid " + args["borderColor"]
