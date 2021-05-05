@@ -38,7 +38,7 @@ $(function(){
         borderColor : "#ccc",
         backgroundColor : "transparent",
         grassColor : "#F00",
-        ivents : {
+        events : {
             "2018/12/25" : [
                 "Studied Python."
             ],
@@ -71,7 +71,7 @@ $(function(){
     - Initial value："transparent"
 - ***grassColor***：The background-color (witch changes own depth by the counts of daily-reports) of cells in calendar.
     - Initial value："#0f0"
-- ***ivents***：Your daily reports. Write according to format "associative-array" like the example in the previous chapter.
+- ***events***：Your daily reports. Write according to format "associative-array" like the example in the previous chapter.
     - Initail value：None
 
 ### DEMO GIF
